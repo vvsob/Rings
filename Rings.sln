@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Rings", "Rings\Rings.vcxproj", "{73E9B626-0ADB-4CA0-8144-E3E9DE766ED8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73E9B626-0ADB-4CA0-8144-E3E9DE766ED8}.Debug|x64.ActiveCfg = Debug|x64
+		{73E9B626-0ADB-4CA0-8144-E3E9DE766ED8}.Debug|x64.Build.0 = Debug|x64
+		{73E9B626-0ADB-4CA0-8144-E3E9DE766ED8}.Debug|x86.ActiveCfg = Debug|Win32
+		{73E9B626-0ADB-4CA0-8144-E3E9DE766ED8}.Debug|x86.Build.0 = Debug|Win32
+		{73E9B626-0ADB-4CA0-8144-E3E9DE766ED8}.Release|x64.ActiveCfg = Release|x64
+		{73E9B626-0ADB-4CA0-8144-E3E9DE766ED8}.Release|x64.Build.0 = Release|x64
+		{73E9B626-0ADB-4CA0-8144-E3E9DE766ED8}.Release|x86.ActiveCfg = Release|Win32
+		{73E9B626-0ADB-4CA0-8144-E3E9DE766ED8}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0E63F66-5341-43E6-A681-B8EFE0921976}
+	EndGlobalSection
+EndGlobal
