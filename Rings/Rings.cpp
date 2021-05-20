@@ -274,7 +274,7 @@ int main()
 			}
 			else
 			{
-				if (rings[pointer.left().ring][pointer.left().pos] != 0)
+				if (rings[pointer.right().ring][pointer.right().pos] != 0)
 				{
 					if (pointer.left().ring == pointer.ring)
 						direction = false;
@@ -298,7 +298,7 @@ int main()
 			}
 			else
 			{
-				if (rings[pointer.up().ring][pointer.up().pos] != 0)
+				if (rings[pointer.down().ring][pointer.down().pos] != 0)
 				{
 					if (pointer.up().ring == pointer.ring)
 						direction = true;
@@ -322,7 +322,7 @@ int main()
 			}
 			else
 			{
-				if (rings[pointer.down().ring][pointer.down().pos] != 0)
+				if (rings[pointer.up().ring][pointer.up().pos] != 0)
 				{
 					if (pointer.down().ring == pointer.ring)
 						direction = false;
@@ -454,8 +454,30 @@ int main()
 			else
 				--pointer;
 			break;
+		case 'd':
+			if (!alter)
+				rings[pointer.outer().ring][pointer.outer().pos] /= rings[pointer.inner().ring][pointer.inner().pos];
+			else
+				rings[pointer.outer().ring][pointer.outer().pos] %= rings[pointer.inner().ring][pointer.inner().pos];
+			if (direction)
+				++pointer;
+			else
+				--pointer;
+			break;
+		case 'D':
+			if (!alter)
+				rings[pointer.outer().ring][pointer.outer().pos] /= rings[pointer.inner().ring][pointer.inner().pos];
+			else
+				rings[pointer.outer().ring][pointer.outer().pos] %= rings[pointer.inner().ring][pointer.inner().pos];
+			if (direction)
+				++pointer;
+			else
+				--pointer;
+			break;
 		case 'p':
 			rings[pointer.inner().ring][pointer.inner().pos] = rings[pointer.outer().ring][pointer.outer().pos];
+			if (alter)
+				rings[pointer.inner().ring][pointer.inner().pos] += rand() % 10 - 5;
 			if (direction)
 				++pointer;
 			else
@@ -463,6 +485,8 @@ int main()
 			break;
 		case 'P':
 			rings[pointer.outer().ring][pointer.outer().pos] = rings[pointer.inner().ring][pointer.inner().pos];
+			if (alter)
+				rings[pointer.inner().ring][pointer.inner().pos] += rand() % 10 - 5;
 			if (direction)
 				++pointer;
 			else
